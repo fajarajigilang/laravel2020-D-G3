@@ -1,0 +1,8 @@
+cara menjalankan buka web ketik localhost:8000/admin-login
+
+username : Reynaldo@gmail.com
+password : 17090014
+
+Nama : Reynaldo Edwin Pratama
+Kelas : 6D 
+NIM   : 17090014
