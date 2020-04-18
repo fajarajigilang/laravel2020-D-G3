@@ -3,6 +3,8 @@
 
 
 Auth::routes();
+
+Route::get('/article', 'WebController@article');
 Route::get('/transaksi', 'TransaksiController@transaksi');
 Route::get('/transaksi/tambah','TransaksiController@tambah');
 Route::post('/transaksi/store','TransaksiController@store');

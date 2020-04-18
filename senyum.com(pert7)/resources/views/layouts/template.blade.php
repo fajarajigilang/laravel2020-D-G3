@@ -214,6 +214,7 @@
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/tarif')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Tarif</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/pelanggan')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Pelanggan</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/transaksi')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Transaksi</span></a></li>
+                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link" href="{{url('/article')}}" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span class="hide-menu">Article</span></a></li>
                     </ul>
                 </nav>
                 <!-- End Sidebar navigation -->

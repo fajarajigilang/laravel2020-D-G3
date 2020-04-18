@@ -10,5 +10,6 @@ Cara Install :
 1. Masukan Database tabassam_rental.sql di dalam phpmyadmin
 2. Masukan folder senyum.com ini ke dalam /XAMPP/htdocs/
 3. kemudian buka cmd lalu ketikan cd /xampp/htdocs/senyum.com
-4. Kemudian ketik perintah php -S localhost:8000 -t public/
-5. SELESAI Silahkan Jalankan 
+4. Kemudian ketik perintah php -S localhost:8000 -t public/ 
+   kemudian jalankan di browser ketik localhost:8000/admin
+5. SELESAI
