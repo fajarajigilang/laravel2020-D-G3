@@ -16,7 +16,6 @@ SISTEM INFORMASI RENTAL MOBIL (Tabassam.com)
 - lalu masuk ke text editor anda kemudian Ubah nama file .env.example menjadi .env
 - kemudian Import Database tabassam_rental.sql ke dalam phpmyadmin
 - Kemudian ketik php artisan key:generate di cmd pada folder laravel2020-D-G3  
-- kemudian ketikan kembali php artisan migrate --seed di dalam folder php artisan key:generate
 - masih di dalam folder laravel2020-D-G3 ketikan php -S localhost:8000 -t public
 - lalu buka broswer dan ketikan localhost:8000/admin
 
