@@ -4,7 +4,7 @@ Anggota Kelompok
 - Reynaldo Edwin Pratama (17090014)
 - Fajar aji Gilang (17090138)
 - Januarrio Kus Gunaldo
-- Wiwit Aulia Rahman
+- Wiwit Aulia Rahman (17090080)
 
 
 CARA INSTALL PROJECT KAMI 
