@@ -2,7 +2,7 @@ Tema Project Kelompok 3
 SISTEM INFORMASI RENTAL MOBIL (Tabassam.com)
 Anggota Kelompok
 - Reynaldo Edwin Pratama (17090014)
-- Fajar Gilang 
+- Fajar aji Gilang (17090138)
 - Januarrio Kus Gunaldo
 - Wiwit Aulia Rahman
 
