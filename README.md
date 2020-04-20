@@ -4,7 +4,7 @@ SISTEM INFORMASI RENTAL MOBIL (Tabassam.com)
 # Anggota Kelompok
 - Reynaldo Edwin Pratama (17090014)
 - Fajar aji Gilang (17090138)
-- Januarrio Kus Gunaldo
+- Januarrio Kus Gunaldo (17090117)
 - Wiwit Aulia Rahman (17090080)
 
 
