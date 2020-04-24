@@ -38,7 +38,7 @@ Route::post('/kendaraan/store','KendaraanController@store');
 Route::get('/kendaraan/edit/{kendaraan_id}','KendaraanController@edit');
 Route::post('/kendaraan/update','KendaraanController@update');
 Route::get('/kendaraan/cari','KendaraanController@cari');
-Route::get('/dashboard', 'DashboardController@dashboard');
+// Route::get('/dashboard', 'DashboardController@dashboard');
 // Route::get('/', 'HomeAwalController@homeawal');
 // Route::get('/menu', 'HomeAwalController@menu');
 // Route::get('/about', 'HomeAwalController@about');
