@@ -30,7 +30,7 @@ Route::get('/sopir/tambah', 'SopirController@tambah');
 Route::post('/sopir/store', 'SopirController@store');
 Route::get('/sopir/edit/{sopir_id}','SopirController@edit');
 Route::post('/sopir/update','SopirController@update');
-Route::get('/sopir/hapus/{id}','SopirController@hapus');
+Route::get('/sopir/hapus/{sopir_id}','SopirController@hapus');
 Route::get('/sopir/cari','SopirController@cari');
 Route::get('/', 'KendaraanController@kendaraan');
 Route::get('/kendaraan/tambah','KendaraanController@tambah');
