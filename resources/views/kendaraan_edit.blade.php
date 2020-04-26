@@ -14,6 +14,10 @@
  
                         {{ csrf_field() }}
                         <div class="form-group">
+                            <label>Kendaraan ID</label>
+                            <input  type="text" name="kendaraan_id" class="form-control" value="{{ $k->kendaraan_id }}">
+                        </div>
+                        <div class="form-group">
                             <label>Kendaraan Platnomor</label>
                             <input  type="text" name="kendaraan_platnomor" class="form-control" value="{{ $k->kendaraan_platnomor }}">
                         </div>

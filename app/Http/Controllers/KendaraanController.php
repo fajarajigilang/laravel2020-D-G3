@@ -38,7 +38,7 @@ class KendaraanController extends Controller
         'kendaraan_status' => $request->kendaraan_status
 	]);
 	// alihkan halaman ke halaman pegawai
-	return redirect('/kendaraan');
+	return redirect('/');
  
          }
 public function edit($kendaraan_id)
@@ -64,7 +64,7 @@ public function update(Request $request)
         'kendaraan_status' => $request->kendaraan_status
 	]);
 	// alihkan halaman ke halaman pegawai
-	return redirect('/kendaraan');
+	return redirect('/');
 }
 
 public function hapus($kendaraan_id)
@@ -73,7 +73,7 @@ public function hapus($kendaraan_id)
 	DB::table('kendaraan')->where('kendaraan_id',$kendaraan_id)->delete();
 		
 	// alihkan halaman ke halaman pegawai
-	return redirect('/kendaraan');
+	return redirect('/');
 }
 
 public function cari(Request $request)
