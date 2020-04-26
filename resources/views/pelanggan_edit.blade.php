@@ -10,14 +10,17 @@
                     <br/>
                     <br/>
                     @foreach($pelanggan as $p)
-                    <form method="post" action="/sopir/update">
+                    <form method="post" action="/pelanggan/update">
  
                         {{ csrf_field() }}
                         <div class="form-group">
                             <label>ID Pelanggan</label>
                             <input  type="text" name="pelanggan_id" class="form-control" value="{{ $p->pelanggan_id }}">
                         </div>
- 
+                        <div class="form-group">
+                            <label>Nama Pelanggan</label>
+                            <input type="text" name="pelanggan_nama" value="{{ $p->pelanggan_nama }}"class="form-control" placeholder="Masukan Alamat Pelanggan"></input>
+                        </div>
  
                         <div class="form-group">
                             <label>Alamat Pelanggan</label>
