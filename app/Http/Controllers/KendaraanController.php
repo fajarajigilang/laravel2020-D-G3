@@ -54,15 +54,14 @@ public function update(Request $request)
 {
 	// update data pegawai
 	DB::table('kendaraan')->where('kendaraan_id',$request->kendaraan_id)->update([
-		'pelanggan_id' => $request->pelanggan_id,
-		'sopir_id' => $request->sopir_id,
-        'transaksi_tglmulai' => $request->transaksi_tglmulai,
-        'transaksi_tglselesai' => $request->transaksi_tglselesai,
-        'transaksi_hari' => $request->transaksi_hari,
-        'transaksi_tglovertime' => $request->transaksi_tglovertime,
-        'transaksi_hariovertime' => $request->transaksi_hariovertime,
-        'transaksi_total' => $request->transaksi_total,
-        'transaksi_status' => $request->transaksi_status
+		'kendaraan_platnomor' => $request->kendaraan_platnomor,
+        'kendaraan_merk' => $request->kendaraan_merk,
+        'kendaraan_tipe' => $request->kendaraan_tipe,
+        'kendaraan_tahunrakit' => $request->kendaraan_tahunrakit,
+        'kendaraan_seat' => $request->kendaraan_seat,
+        'kendaraan_foto' => $request->kendaraan_foto,
+        'kendaraan_fasilitas' => $request->kendaraan_fasilitas,
+        'kendaraan_status' => $request->kendaraan_status
 	]);
 	// alihkan halaman ke halaman pegawai
 	return redirect('/kendaraan');
