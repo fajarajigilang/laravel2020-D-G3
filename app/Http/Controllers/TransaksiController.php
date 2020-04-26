@@ -69,6 +69,15 @@ public function update(Request $request)
 	return redirect('/transaksi');
 }
 
+public function hapus($transaksi_id)
+{
+	// menghapus data pegawai berdasarkan id yang dipilih
+	DB::table('transaksi')->where('transaksi_id',$transaksi_id)->delete();
+		
+	// alihkan halaman ke halaman pegawai
+	return redirect('/transaksi');
+}
+
 public function cari(Request $request)
 	{
 		// menangkap data pencarian

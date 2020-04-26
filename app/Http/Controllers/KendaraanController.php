@@ -68,6 +68,15 @@ public function update(Request $request)
 	return redirect('/kendaraan');
 }
 
+public function hapus($kendaraan_id)
+{
+	// menghapus data pegawai berdasarkan id yang dipilih
+	DB::table('kendaraan')->where('kendaraan_id',$kendaraan_id)->delete();
+		
+	// alihkan halaman ke halaman pegawai
+	return redirect('/kendaraan');
+}
+
 public function cari(Request $request)
 	{
 		// menangkap data pencarian
