@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 18, 2020 at 09:53 AM
+-- Generation Time: Jun 06, 2020 at 04:58 AM
 -- Server version: 10.4.11-MariaDB
 -- PHP Version: 7.2.29
 
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `tabassam_rental`
+-- Database: `aka`
 --
 
 -- --------------------------------------------------------
@@ -35,42 +35,6 @@ CREATE TABLE `admins` (
   `created_at` timestamp NULL DEFAULT NULL,
   `updated_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `admins`
---
-
-INSERT INTO `admins` (`id`, `name`, `email`, `password`, `created_at`, `updated_at`) VALUES
-(2, 'reynaldo', 'reynaldo@gmail.com', '$2y$10$WhZWXm8fqoCLOfO4HqqZ1ukYPcYQhgkgq5/v5dcXL7T3eQm6Ihaa2', '2020-03-31 06:34:49', '2020-03-31 06:34:49');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `articles`
---
-
-CREATE TABLE `articles` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `judul` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `articles`
---
-
-INSERT INTO `articles` (`id`, `judul`, `created_at`, `updated_at`) VALUES
-(1, 'Placeat saepe ea possimus provident quos est molestiae reiciendis.', NULL, NULL),
-(2, 'Totam laudantium molestiae similique sit.', NULL, NULL),
-(3, 'Aut consequatur ducimus ut non voluptatem voluptas.', NULL, NULL),
-(4, 'Ad sit voluptatem qui ut dolorem.', NULL, NULL),
-(5, 'Qui consequatur eum fuga corrupti.', NULL, NULL),
-(6, 'Quos nesciunt blanditiis amet odio.', NULL, NULL),
-(7, 'Ex doloremque consequuntur velit alias repellendus ullam.', NULL, NULL),
-(8, 'Perspiciatis a quo beatae nobis et suscipit illo.', NULL, NULL),
-(9, 'Maiores voluptate animi est enim totam.', NULL, NULL),
-(10, 'Rerum expedita inventore nulla voluptates perferendis placeat.', NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -230,9 +194,9 @@ CREATE TABLE `migrations` (
 INSERT INTO `migrations` (`id`, `migration`, `batch`) VALUES
 (1, '2014_10_12_000000_create_users_table', 1),
 (2, '2014_10_12_100000_create_password_resets_table', 1),
-(3, '2020_03_30_073322_create_admins_table', 1),
-(4, '2020_03_30_152746_create_products_table', 2),
-(5, '2020_03_30_152914_create_comments_table', 2);
+(3, '2020_03_30_073322_create_admins_table', 2),
+(4, '2020_03_30_152746_create_products_table', 3),
+(5, '2020_03_30_152914_create_comments_table', 3);
 
 -- --------------------------------------------------------
 
@@ -245,6 +209,13 @@ CREATE TABLE `password_resets` (
   `token` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `created_at` timestamp NULL DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
+
+--
+-- Dumping data for table `password_resets`
+--
+
+INSERT INTO `password_resets` (`email`, `token`, `created_at`) VALUES
+('ummuruqayyah@gmail.com', '$2y$10$fmUERuX9.up8HvArUyzN4OWMlBXsJUzGpUKXx6wVZ670yO7EX.uHi', '2020-06-06 09:06:30');
 
 -- --------------------------------------------------------
 
@@ -363,7 +334,8 @@ INSERT INTO `pelanggan` (`pelanggan_id`, `pelanggan_nama`, `pelanggan_alamat`, `
 (98, 'Demian', 'Kota Tegal', '09876555'),
 (99, 'Lucardo', 'Banjarmasin', '0986884'),
 (100, 'I Made AgusWirawan', 'Bali', '087765227'),
-(101, 'bakhry', 'Kota Tegal', '08763567');
+(101, 'bakhry', 'Kota Tegal', '08763567'),
+(104, 'edo', 'kotategal', '098754567878');
 
 -- --------------------------------------------------------
 
@@ -532,66 +504,6 @@ INSERT INTO `sopir` (`sopir_id`, `sopir_alamat`, `sopir_nama`, `sopir_telpon`, `
 (100, 'Bali', 'I Nyoman Agung Setiawan', '9446464744', '3837363536', '0484746446', 'jalan'),
 (101, 'Surabaya', 'Aisyah Syahida', '84464474', '04474644747', '1817353737', 'bebas'),
 (102, 'Kab Tegal', 'Reynaldo Edwin Pratama', '93873636', '98376363', '039387373', 'bebas');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tags`
---
-
-CREATE TABLE `tags` (
-  `id` int(10) UNSIGNED NOT NULL,
-  `tag` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
-  `article_id` int(10) UNSIGNED NOT NULL,
-  `created_at` timestamp NULL DEFAULT NULL,
-  `updated_at` timestamp NULL DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
-
---
--- Dumping data for table `tags`
---
-
-INSERT INTO `tags` (`id`, `tag`, `article_id`, `created_at`, `updated_at`) VALUES
-(1, 'dolores', 2, NULL, NULL),
-(2, 'culpa', 3, NULL, NULL),
-(3, 'sit', 4, NULL, NULL),
-(4, 'quasi', 3, NULL, NULL),
-(5, 'inventore', 5, NULL, NULL),
-(6, 'ut', 7, NULL, NULL),
-(7, 'quisquam', 5, NULL, NULL),
-(8, 'fugiat', 7, NULL, NULL),
-(9, 'perspiciatis', 5, NULL, NULL),
-(10, 'voluptatem', 3, NULL, NULL),
-(11, 'non', 2, NULL, NULL),
-(12, 'ducimus', 5, NULL, NULL),
-(13, 'tempora', 4, NULL, NULL),
-(14, 'voluptatem', 10, NULL, NULL),
-(15, 'nisi', 3, NULL, NULL),
-(16, 'exercitationem', 10, NULL, NULL),
-(17, 'sed', 2, NULL, NULL),
-(18, 'tempora', 6, NULL, NULL),
-(19, 'laudantium', 7, NULL, NULL),
-(20, 'a', 6, NULL, NULL),
-(21, 'consequuntur', 9, NULL, NULL),
-(22, 'omnis', 1, NULL, NULL),
-(23, 'rerum', 9, NULL, NULL),
-(24, 'ut', 1, NULL, NULL),
-(25, 'amet', 10, NULL, NULL),
-(26, 'atque', 9, NULL, NULL),
-(27, 'at', 4, NULL, NULL),
-(28, 'hic', 3, NULL, NULL),
-(29, 'itaque', 1, NULL, NULL),
-(30, 'quia', 9, NULL, NULL),
-(31, 'consequatur', 8, NULL, NULL),
-(32, 'non', 9, NULL, NULL),
-(33, 'explicabo', 10, NULL, NULL),
-(34, 'eos', 6, NULL, NULL),
-(35, 'eveniet', 5, NULL, NULL),
-(36, 'dolor', 10, NULL, NULL),
-(37, 'magnam', 10, NULL, NULL),
-(38, 'aut', 1, NULL, NULL),
-(39, 'et', 6, NULL, NULL),
-(40, 'ut', 10, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -873,9 +785,10 @@ INSERT INTO `transaksi` (`transaksi_id`, `pelanggan_id`, `sopir_id`, `transaksi_
 --
 
 CREATE TABLE `users` (
-  `id` int(10) UNSIGNED NOT NULL,
+  `id` bigint(20) UNSIGNED NOT NULL,
   `name` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `email` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
+  `email_verified_at` timestamp NULL DEFAULT NULL,
   `password` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
   `remember_token` varchar(100) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `created_at` timestamp NULL DEFAULT NULL,
@@ -886,9 +799,8 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'reynaldo', 'reynaldoex723@gmail.com', '$2y$10$OcNA5oK4pcqb4tac6Re.4e5Iq1NGgCWCtDCQOFaYuPCz2P5CGrjtm', 'rCzm3CzDZqc9PGuCTc3m7saR7JEUIqPJYmGqcDmsgtnLxUqm33Dt70PfvXbc', '2020-03-30 15:38:54', '2020-03-30 15:38:54'),
-(2, 'hida', 'hida@gmail.com', '$2y$10$eP4wA57ABG6PxEpOhoKhzeygN4H.0..vV1A.PbyFL6DsPvdKBWbyC', '47O2heYxacoOsFwsPJjU6vEEvq0dgUMpuUCqJtXpms9DtN1i2JVyp97f02DU', '2020-04-02 20:50:38', '2020-04-02 20:50:38');
+INSERT INTO `users` (`id`, `name`, `email`, `email_verified_at`, `password`, `remember_token`, `created_at`, `updated_at`) VALUES
+(8, 'Ummu Ruqayyah', 'ummuruqayyah@gmail.com', '2020-06-06 09:57:04', '$2y$10$QTyFLO4K9aBtgqbEFO1yGuaVHlzUFyWqr4nVpkHEhCvJu60h1MLxi', NULL, '2020-06-06 09:56:39', '2020-06-06 09:57:04');
 
 --
 -- Indexes for dumped tables
@@ -900,12 +812,6 @@ INSERT INTO `users` (`id`, `name`, `email`, `password`, `remember_token`, `creat
 ALTER TABLE `admins`
   ADD PRIMARY KEY (`id`),
   ADD UNIQUE KEY `admins_email_unique` (`email`);
-
---
--- Indexes for table `articles`
---
-ALTER TABLE `articles`
-  ADD PRIMARY KEY (`id`);
 
 --
 -- Indexes for table `comments`
@@ -956,12 +862,6 @@ ALTER TABLE `sopir`
   ADD PRIMARY KEY (`sopir_id`);
 
 --
--- Indexes for table `tags`
---
-ALTER TABLE `tags`
-  ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `tarif`
 --
 ALTER TABLE `tarif`
@@ -994,25 +894,13 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `admins`
 --
 ALTER TABLE `admins`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-
---
--- AUTO_INCREMENT for table `articles`
---
-ALTER TABLE `articles`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT for table `comments`
 --
 ALTER TABLE `comments`
   MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `kendaraan`
---
-ALTER TABLE `kendaraan`
-  MODIFY `kendaraan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `migrations`
@@ -1024,7 +912,7 @@ ALTER TABLE `migrations`
 -- AUTO_INCREMENT for table `pelanggan`
 --
 ALTER TABLE `pelanggan`
-  MODIFY `pelanggan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=102;
+  MODIFY `pelanggan_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `pengguna`
@@ -1042,19 +930,13 @@ ALTER TABLE `products`
 -- AUTO_INCREMENT for table `sopir`
 --
 ALTER TABLE `sopir`
-  MODIFY `sopir_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
-
---
--- AUTO_INCREMENT for table `tags`
---
-ALTER TABLE `tags`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+  MODIFY `sopir_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=105;
 
 --
 -- AUTO_INCREMENT for table `tarif`
 --
 ALTER TABLE `tarif`
-  MODIFY `tarif_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=106;
+  MODIFY `tarif_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=108;
 
 --
 -- AUTO_INCREMENT for table `telepon`
@@ -1066,13 +948,13 @@ ALTER TABLE `telepon`
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `transaksi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=101;
+  MODIFY `transaksi_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=103;
 
 --
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id` bigint(20) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
